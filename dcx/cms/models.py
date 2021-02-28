@@ -4,7 +4,7 @@ from django.db import models
 class Project(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
-    image = models.FileField(upload_to='files/projects/')
+    image = models.FileField(upload_to='projects/')
     on_display = models.BooleanField(default=True)
 
 
@@ -19,5 +19,5 @@ class Testimonial(models.Model):
     name = models.CharField(max_length=150)
     designation = models.CharField(max_length=150)
     testimonial = models.TextField()
-    image = models.FileField(upload_to='files/testimonials')
+    image = models.FileField(upload_to='testimonials/')
     on_display = models.BooleanField(default=True)
